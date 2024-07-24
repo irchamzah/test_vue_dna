@@ -2,14 +2,13 @@
   <div
     class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full min-h-60 relative"
   >
-    <!-- container for the image -->
     <div className="relative  h-full">
       <img
         :src="news.urlToImage"
         alt="News Image"
         class="h-full object-cover"
       />
-      <!-- overlay for the background -->
+
       <div
         :class="{
           'absolute inset-0': true,
@@ -20,7 +19,6 @@
       ></div>
     </div>
 
-    <!-- text content -->
     <div
       :class="{
         'absolute inset-0 p-4 flex flex-col': true,

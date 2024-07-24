@@ -23,7 +23,6 @@
     </div>
 
     <div v-else>
-      <!-- Layout for xl screens -->
       <div class="hidden xl:grid grid-cols-5 gap-4">
         <div class="rounded col-span-2 overflow-hidden h-full shadow-md">
           <NewsCard v-if="newsList[0]" :key="0" :news="newsList[0]" />
@@ -52,7 +51,6 @@
         </div>
       </div>
 
-      <!-- Layout for smaller screens -->
       <div
         class="xl:hidden rounded grid sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-col"
       >
@@ -155,11 +153,9 @@ export default {
       return Math.ceil(this.totalResults / this.pageSize);
     },
     displayedReadNews() {
-      // <--
       return this.readNews.slice(0, this.displayedReadNewsCount);
     },
     hasMoreReadNews() {
-      // <--
       return this.readNews.length > this.displayedReadNewsCount;
     },
   },
@@ -199,8 +195,7 @@ export default {
       localStorage.removeItem("readNews");
     },
     loadMoreReadNews() {
-      // <--
-      this.displayedReadNewsCount += 5; // Tambah jumlah berita yang ditampilkan
+      this.displayedReadNewsCount += 5;
     },
   },
   mounted() {
